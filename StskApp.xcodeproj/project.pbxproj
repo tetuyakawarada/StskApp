@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7A84BBC2921C188007B59BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A84BBB2921C188007B59BB /* Constants.swift */; };
 		D26F188E2915A15D00BEA18B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F188D2915A15D00BEA18B /* AppDelegate.swift */; };
 		D26F18902915A15D00BEA18B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F188F2915A15D00BEA18B /* SceneDelegate.swift */; };
 		D26F18922915A15D00BEA18B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F18912915A15D00BEA18B /* ViewController.swift */; };
@@ -16,7 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D26F188A2915A15D00BEA18B /* API-BlogApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "API-BlogApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7A84BBB2921C188007B59BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D26F188A2915A15D00BEA18B /* StskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26F188D2915A15D00BEA18B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D26F188F2915A15D00BEA18B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D26F18912915A15D00BEA18B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +42,7 @@
 		D26F18812915A15D00BEA18B = {
 			isa = PBXGroup;
 			children = (
-				D26F188C2915A15D00BEA18B /* API-BlogApp */,
+				D26F188C2915A15D00BEA18B /* StskApp */,
 				D26F188B2915A15D00BEA18B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,15 +50,16 @@
 		D26F188B2915A15D00BEA18B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D26F188A2915A15D00BEA18B /* API-BlogApp.app */,
+				D26F188A2915A15D00BEA18B /* StskApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D26F188C2915A15D00BEA18B /* API-BlogApp */ = {
+		D26F188C2915A15D00BEA18B /* StskApp */ = {
 			isa = PBXGroup;
 			children = (
 				D26F188D2915A15D00BEA18B /* AppDelegate.swift */,
+				A7A84BBB2921C188007B59BB /* Constants.swift */,
 				D26F188F2915A15D00BEA18B /* SceneDelegate.swift */,
 				D26F18912915A15D00BEA18B /* ViewController.swift */,
 				D26F18932915A15D00BEA18B /* Main.storyboard */,
@@ -64,15 +67,15 @@
 				D26F18982915A15F00BEA18B /* LaunchScreen.storyboard */,
 				D26F189B2915A15F00BEA18B /* Info.plist */,
 			);
-			path = "API-BlogApp";
+			path = StskApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D26F18892915A15D00BEA18B /* API-BlogApp */ = {
+		D26F18892915A15D00BEA18B /* StskApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D26F189E2915A15F00BEA18B /* Build configuration list for PBXNativeTarget "API-BlogApp" */;
+			buildConfigurationList = D26F189E2915A15F00BEA18B /* Build configuration list for PBXNativeTarget "StskApp" */;
 			buildPhases = (
 				D26F18862915A15D00BEA18B /* Sources */,
 				D26F18872915A15D00BEA18B /* Frameworks */,
@@ -82,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = "API-BlogApp";
+			name = StskApp;
 			productName = "API-BlogApp";
-			productReference = D26F188A2915A15D00BEA18B /* API-BlogApp.app */;
+			productReference = D26F188A2915A15D00BEA18B /* StskApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,8 +105,8 @@
 					};
 				};
 			};
-			buildConfigurationList = D26F18852915A15D00BEA18B /* Build configuration list for PBXProject "API-BlogApp" */;
-			compatibilityVersion = "Xcode 14.0";
+			buildConfigurationList = D26F18852915A15D00BEA18B /* Build configuration list for PBXProject "StskApp" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -115,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D26F18892915A15D00BEA18B /* API-BlogApp */,
+				D26F18892915A15D00BEA18B /* StskApp */,
 			);
 		};
 /* End PBXProject section */
@@ -141,6 +144,7 @@
 				D26F18922915A15D00BEA18B /* ViewController.swift in Sources */,
 				D26F188E2915A15D00BEA18B /* AppDelegate.swift in Sources */,
 				D26F18902915A15D00BEA18B /* SceneDelegate.swift in Sources */,
+				A7A84BBC2921C188007B59BB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,18 +293,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "API-BlogApp/Info.plist";
+				INFOPLIST_FILE = StskApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xxxxxxxxx.API-BlogApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kawa0419.API-BlogApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -317,18 +320,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "API-BlogApp/Info.plist";
+				INFOPLIST_FILE = StskApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xxxxxxxxx.API-BlogApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kawa0419.API-BlogApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -339,7 +341,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D26F18852915A15D00BEA18B /* Build configuration list for PBXProject "API-BlogApp" */ = {
+		D26F18852915A15D00BEA18B /* Build configuration list for PBXProject "StskApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D26F189C2915A15F00BEA18B /* Debug */,
@@ -348,7 +350,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D26F189E2915A15F00BEA18B /* Build configuration list for PBXNativeTarget "API-BlogApp" */ = {
+		D26F189E2915A15F00BEA18B /* Build configuration list for PBXNativeTarget "StskApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D26F189F2915A15F00BEA18B /* Debug */,
