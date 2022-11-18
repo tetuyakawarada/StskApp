@@ -14,7 +14,7 @@ class IndexViewController: UIViewController {
     
     @IBOutlet weak var taskTableView: UITableView!
     let consts = Constants.shared
-    let sectionTitle = ["投稿一覧"]
+    let sectionTitle = ["課題一覧"]
     private var token = ""
 
     var tasks: [Task] = []
@@ -24,6 +24,7 @@ class IndexViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         taskTableView.dataSource = self
+        taskTableView.delegate = self
         getUser()
     }
     
@@ -33,7 +34,7 @@ class IndexViewController: UIViewController {
     
     func requestIndex(){
         //URL、トークン、ヘッダーを用意
-        let url = URL(string: consts.baseUrl + "/api/posts")!
+        let url = URL(string: consts.baseUrl + "/api/tasks")!
         let token = LoadToken().loadAccessToken()
         let headers: HTTPHeaders = [
             .contentType("application/json"),
@@ -91,6 +92,13 @@ class IndexViewController: UIViewController {
             }
         }
     }
+    
+    
+    @IBAction func pressedCreateButtton(_ sender: Any) {
+        let createVC = self.storyboard?.instantiateViewController(withIdentifier: "Create") as! CreateViewController
+        navigationController?.pushViewController(createVC, animated: true)
+    }
+
 
 
 
@@ -126,14 +134,29 @@ extension IndexViewController: UITableViewDataSource {
     //セル1つの中身
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! TaskTableViewCell
+        cell.subjectNameLabel.text = tasks[indexPath.row].subjectName
         cell.titleLabel.text = tasks[indexPath.row].title
+        cell.bodyLabel.text = tasks[indexPath.row].body
+        cell.progressTimeLabel.text = "\(tasks[indexPath.row].progressTime)"
+        cell.totalTimeLabel.text = "\(tasks[indexPath.row].totalTime)"
+        cell.degreeTimeLabel.text = "\(tasks[indexPath.row].degreeTime)"
 //        cell.authorLabel.text = tasks[indexPath.row].userName
 //        cell.createdAtLabel.text = tasks[indexPath.row].createdAt
-//        cell.articleImageView.kf.setImage(with: URL(string: tasks[indexPath.row].imageUrl)!)
-        cell.bodyLabel.text = tasks[indexPath.row].body
-        
+
         return cell
     }
     
 }
+
+extension IndexViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let task = tasks[indexPath.row]
+        let detailVC = storyboard?.instantiateViewController(withIdentifier: "Detail") as! DetailViewController
+        guard let user = user else { return }
+        detailVC.taskId = task.id //詳細画面の変数に記事のIDを渡す
+        detailVC.myUser = user //ユーザー情報も渡す
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+}
+
 

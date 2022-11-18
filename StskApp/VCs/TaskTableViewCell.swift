@@ -10,10 +10,12 @@ import UIKit
 class TaskTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel! //①
-    @IBOutlet weak var authorLabel: UILabel! //②
-    @IBOutlet weak var createdAtLabel: UILabel! //③
+    @IBOutlet weak var subjectNameLabel: UILabel! //②
     @IBOutlet weak var bodyLabel: UILabel! //④
-    @IBOutlet weak var articleImageView: UIImageView! //⑤
+    @IBOutlet weak var progressTimeLabel: UILabel! //⑤
+    @IBOutlet weak var totalTimeLabel: UILabel! //⑤
+    @IBOutlet weak var degreeTimeLabel: UILabel! //⑤
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

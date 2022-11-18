@@ -45,6 +45,7 @@ class LoginViewController: UIViewController {
             switch response.result {
             case .success(let value):
                 let token = value.accessToken
+                print("TOKEN:", token)
                 let keychain = Keychain(service: self.consts.service) //このアプリ用のキーチェーンを生成
                 keychain["access_token"] = token //トークンをキーチェーンに保存
                 self.transitionToIndex() //NavigationController経由で一覧画面へ
@@ -66,6 +67,7 @@ class LoginViewController: UIViewController {
                 guard error == nil, let successURL = callback else { return }
                 let queryItems = URLComponents(string: successURL.absoluteString)?.queryItems
                 guard let code = queryItems?.filter({ $0.name == "code" }).first?.value else { return }
+                print("CODE:", code)
                 self.getAccessToken(code: code) //取得したcodeでアクセストークンをリクエスト
             }
         }
