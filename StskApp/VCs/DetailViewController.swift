@@ -17,13 +17,26 @@ class DetailViewController: UIViewController {
     private var token = ""
     
     
-    @IBOutlet weak var titleLabel: UILabel! //①
-//    @IBOutlet weak var authorLabel: UILabel! //②
-//    @IBOutlet weak var createdAtLabel: UILabel! //③
-//    @IBOutlet weak var bodyLabel: UILabel! //④
-//    @IBOutlet weak var articleImageView: UIImageView! //⑤
-//    @IBOutlet weak var commentTableView: UITableView! //⑥
-    @IBOutlet weak var editAndDeleteButtonState: UIBarButtonItem! //⑦
+    @IBOutlet weak var subjectNameLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bodyLabel: UILabel!
+    
+    @IBOutlet weak var totalPageLabel: UILabel!
+    @IBOutlet weak var pageTimeLabel: UILabel!
+    @IBOutlet weak var totalTimeLabel: UILabel!
+
+    
+    @IBOutlet weak var finishPageLabel: UILabel!
+    @IBOutlet weak var pageTimeLabel2: UILabel!
+    @IBOutlet weak var progressTimeLabel: UILabel!
+    
+    
+    @IBOutlet weak var degreeTimeLabel: UILabel!
+
+    @IBOutlet weak var createdAtLabel: UILabel!
+    @IBOutlet weak var updatedAtLabel: UILabel!
+
+    @IBOutlet weak var editAndDeleteButtonState: UIBarButtonItem!
 
     
 
@@ -59,7 +72,29 @@ class DetailViewController: UIViewController {
                 print("🌟success from Detail🌟")
 
                 //それぞれのラベルやイメージビューに受け取ったものを入れる
+                self.subjectNameLabel.text = task.subjectName
                 self.titleLabel.text = task.title
+                self.bodyLabel.text = task.body
+
+                self.totalPageLabel.text = "所要時間：" + "\(task.totalPage)"+" p ×"
+                self.pageTimeLabel.text = "\(task.pageTime)"+" 分 ="
+                self.totalTimeLabel.text = "\(task.totalTime)"+" 分"
+
+                
+                self.finishPageLabel.text = "経過時間：" + "\(task.finishPage)"+" p ×"
+                self.pageTimeLabel2.text = "\(task.pageTime)"+" 分 ="
+                self.progressTimeLabel.text = "\(task.progressTime)"+" 分"
+                
+                self.createdAtLabel.text = "作成日時：" + task.createdAt
+                self.updatedAtLabel.text = "更新日時：" + task.updatedAt
+
+                self.degreeTimeLabel.text = "\(task.degreeTime)"
+
+
+
+//                @IBOutlet weak var createdAtLabel: UILabel!
+//                @IBOutlet weak var updatedAtLabel: UILabel!
+
 //                self.authorLabel.text = article.userName
 //                self.createdAtLabel.text = article.createdAt
 //                self.bodyLabel.text = article.body

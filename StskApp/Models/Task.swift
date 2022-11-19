@@ -25,7 +25,7 @@ struct Task: Codable {
     let totalTime: Int
     let progressTime: Int
     let degreeTime: Int
-
+    
     
     enum CodingKeys:  String, CodingKey {
         case id //"id": 9,

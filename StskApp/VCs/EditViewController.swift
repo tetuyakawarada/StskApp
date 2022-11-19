@@ -13,18 +13,27 @@ import Kingfisher
 
 class EditViewController: UIViewController {
     var taskId: Int!
-    
     private var token = ""
     let consts = Constants.shared
 //    let okAlert = OkAlert()
+    
+    @IBOutlet weak var finishPageTextField: UITextField! //①
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //token読み込み
+        token = LoadToken().loadAccessToken()
     }
     
+    @IBAction func updateButton(_ sender: Any) {
+    }
 
+    @IBAction func deleteButton(_ sender: Any) {
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
