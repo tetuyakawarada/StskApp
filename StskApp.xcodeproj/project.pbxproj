@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38AFE4D1B50C900B47D6E3FF /* Pods_StskApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5EF4F36B263CC9066E33020 /* Pods_StskApp.framework */; };
+		A78440D52928D21A008EA968 /* Updatingtask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78440D42928D21A008EA968 /* Updatingtask.swift */; };
 		A7A84BBC2921C188007B59BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A84BBB2921C188007B59BB /* Constants.swift */; };
 		A7EF4F2F2921CAB7004FA001 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF4F2E2921CAB7004FA001 /* LoginViewController.swift */; };
 		A7EF4F322921CE4F004FA001 /* GetToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF4F312921CE4F004FA001 /* GetToken.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A78440D42928D21A008EA968 /* Updatingtask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatingtask.swift; sourceTree = "<group>"; };
 		A7A84BBB2921C188007B59BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A7EF4F2E2921CAB7004FA001 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A7EF4F312921CE4F004FA001 /* GetToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetToken.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				A7EF4F462925FE22004FA001 /* DetailViewController.swift */,
 				A7EF4F482925FFAC004FA001 /* CreateViewController.swift */,
 				A7EF4F4A2925FFCB004FA001 /* EditViewController.swift */,
+				A78440D42928D21A008EA968 /* Updatingtask.swift */,
 				A7EF4F3E292464C7004FA001 /* TaskTableViewCell.swift */,
 			);
 			path = VCs;
@@ -270,6 +273,7 @@
 				A7EF4F2F2921CAB7004FA001 /* LoginViewController.swift in Sources */,
 				A7EF4F4529246708004FA001 /* LoadToken.swift in Sources */,
 				A7EF4F3829227C14004FA001 /* IndexViewController.swift in Sources */,
+				A78440D52928D21A008EA968 /* Updatingtask.swift in Sources */,
 				A7EF4F3A29229358004FA001 /* Index.swift in Sources */,
 				A7A84BBC2921C188007B59BB /* Constants.swift in Sources */,
 				A7EF4F432924668B004FA001 /* User.swift in Sources */,
